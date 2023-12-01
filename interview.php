@@ -1,22 +1,28 @@
 <?php
+$text = "";
+$text2 = "";
 if(isset($_GET['section'])){
     switch($_GET["section"]):
         case "inter2":
             $text = "Answer 1 Here";
+            $text2 = "Different Answer 1";
             break;
         case "inter3":
             $text = "Answer 2";
+            $text2 = "Different Answer 2";
             break;
         case "inter4":
-            $text = "Answer 3, of cours";
+            $text = "Answer 3, of course";
+            $text2 = "Different Answer 3";
             break;
         case "inter5":
-            $text = "Fifth answer";
+            $text = "Fourth answer";
+            $text2 = "Different Answer 4";
             break;
         case "inter6":
             $text = "Another answer here";
-        default:
-            $text = "File not Found, sucker!";
+            $text2 = "Different Answer 5";
+            break;
     endswitch;
 
 }
@@ -60,7 +66,20 @@ if(isset($_GET['section'])){
 
             </div>
             <div class="row">
-                <div class="column" id="col1">    <p><?=$text?></p>
+                <div class="column" id="col1">
+                    <?php
+                        if(empty($text)){
+
+                            ?>
+                            <img src="JD.png" alt="">
+                            <p>un texte accueil</p>
+                            <?php
+
+                        }else{
+                            echo "<p>$text</p>";
+                        }
+
+                    ?>
     <!--                <a href="https://www.linkedin.com/in/jddpro" target="_blank">                Hi JD, can I use your linkedin profile photo on my site or would you prefer a different one? --- Hi Lee, go ahead it's my favorite of me 
                     <img src="../images/JD.png" alt="JD" title="Photo profil de linkedin">       Salut JD, puis-je utiliser ta photo de profil LinkedIn sur mon site ou préférerais-tu une autre ? --- Salut Lee, vas-y, c'est ma préférée de moi -->
                     </a>
@@ -75,10 +94,23 @@ if(isset($_GET['section'])){
                         <a href="?section=inter6"><li>Des tips pour la suite?</li></a>
                     </ul>
                 </div> 
+                    <?php
+                        if(empty($text)){
+                        
+                            ?>
+                            <img src="MC.png" alt="">
+                            <p>un texte accueil</p>
+                            <?php
 
-                <div class="column" id="col3">    <p><?=($text)?></p>
+                        }else{
+                            echo "<p>$text</p>";
+                        }
+
+                        ?>
+
+                
                    <a href="https://be.linkedin.com/in/martin-copyright" target="_blank">          <!-- Puis-je utiliser ton avatar LinkedIn sur mon site ? -->
-                    <img src="../images/MC.png" alt="MC" title="Photo profil de son linkedin">      <!-- Mais bien sur -->
+                    <img src="../images/MC.png" alt="" title="Photo profil de son linkedin">      <!-- Mais bien sur -->
                     </a>
             </div>    
             </div>
