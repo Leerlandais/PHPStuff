@@ -213,7 +213,7 @@ dd:target {
 }
 
 .column {
-    width: 33%;
+
     border-radius: 50px;
     border-color: black;
     text-align: center;
@@ -221,15 +221,27 @@ dd:target {
     padding: 25px;
 }
 
-#col1 {
-    /* background-color: aqua; */
-    font-size: 20px;
-}
+.col4 {
+
+    font-size: larger;
+    font-style: italic;
+    font-family: Verdana, Tahoma, sans-serif;
+    overflow-wrap:normal;
+
+} 
   
-#col2 {
+#col3 {
     /* background-color: red; */                /* Au début, je mettre des couleurs différent sur les elements pour voir plus façilement lequel est lequel :-)*/
-    font-size: 20px;
+    width: 25%;
+    font-size: larger;
+    font-style: italic;
+    font-family: Verdana, Tahoma, sans-serif;
+    overflow-wrap:normal;
     
+}
+
+#col2{
+    width: 800px !important;
 }
 
 #col2 a {
@@ -237,10 +249,6 @@ dd:target {
 }
 
   
-#col3 {
-    /* background-color: darkorchid; */
-    font-size: 20px;
-}
 
 .column ul li {    
     font-family: Verdana, Tahoma, sans-serif;                             
